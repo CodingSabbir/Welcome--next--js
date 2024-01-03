@@ -1,14 +1,27 @@
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
+const Alegreya = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  display:  'optional',
+})
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+     
+      <body className={Alegreya.className}>
+      <header>
+        <p>header</p>
+      </header>
+        {children}
+        <footer>
+        <p>footer</p>
+      </footer>
+        </body>
+   
     </html>
   )
 }
